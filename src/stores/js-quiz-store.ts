@@ -13,6 +13,9 @@ export const useJsQuizStore = defineStore('jsQuizStore', {
     nextQuestion() {
       this.questionIndex = `${+this.questionIndex + 1}`;
     },
+    setQuestion(id: string) {
+      this.questionIndex = id;
+    },
     prevQuestion() {
       this.questionIndex = `${+this.questionIndex - 1}`;
     },

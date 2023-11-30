@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import CodeDisplay from 'components/CodeDisplay.vue';
-import ConfettiExplosion from 'vue-confetti-explosion';
 import { useAppStore } from 'stores/app-store';
 import { TQuestion } from 'app/src';
 import { nextTick, ref } from 'vue';
 import MarkdownRenderer from 'components/MarkdownRenderer.vue';
 import AnswerExplanation from 'components/AnswerExplanation.vue';
 import { useJsQuizStore } from 'stores/js-quiz-store';
+import ConfettiExplosion from 'vue-confetti-explosion';
 
 const appStore = useAppStore();
 const jsQuizStore = useJsQuizStore();
@@ -38,17 +38,18 @@ const handleOptionSelection = (answer: number, correct: boolean) => {
 
 <template>
   <div class="column full-width relative-position">
-    <div class="row items-center gap-1">
+    <ConfettiExplosion class="absolute-bottom" :particleCount="200"
+                       :force="0.3" v-if="confettiVisible"/>
+    <div class="row items-center q-gutter-sm">
       <q-avatar round color="primary" class="text-weight-bold text-dark">
         {{ $props.question.id }}
       </q-avatar>
       <span> {{ $props.question.title }}</span>
     </div>
     <div class="row full-width relative-position">
-      <code-display :code="$props.question.code"></code-display>
-      <ConfettiExplosion class="absolute-bottom" :particleCount="200"
-                         :force="0.3" v-if="confettiVisible"/>
+      <code-display v-if="$props.question.code" :code="$props.question.code"></code-display>
     </div>
+    <div class="spacer" v-if="!question.code"></div>
     <div class="column full-width gap-2">
       <template v-bind:key="index"
                 v-for="(option, index) in $props.question.options">
@@ -56,7 +57,7 @@ const handleOptionSelection = (answer: number, correct: boolean) => {
              :class="selection === index  ? option.correct?
               'bg-green-2 text-positive' : 'bg-red-2 text-negative' : ''">
           <q-checkbox
-            class="q-pa-sm tapred option full-width option"
+            class="q-pa-sm tapred option full-width option bg-code"
             :color="selection === index  ? option.correct?
               'positive' : 'negative' : ''"
             :model-value="selection === index"
@@ -81,6 +82,11 @@ const handleOptionSelection = (answer: number, correct: boolean) => {
 </template>
 
 <style lang="scss">
+
+.spacer {
+  height: 80px;
+}
+
 .option {
   border: 1px solid $primary;
 }

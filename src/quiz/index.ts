@@ -341,7 +341,7 @@ export const jsQuestions: TQuestion[] = [
   },
   {
     id: '13',
-    code: '\n',
+    code: '',
     title: '13. What are the three phases of event propagation?',
     options: [
       {
@@ -370,7 +370,7 @@ export const jsQuestions: TQuestion[] = [
   },
   {
     id: '14',
-    code: '\n',
+    code: '',
     title: '14. All object have prototypes.',
     options: [
       {
@@ -698,7 +698,7 @@ export const jsQuestions: TQuestion[] = [
   },
   {
     id: '26',
-    code: '\n',
+    code: '',
     title: '26. The JavaScript global execution context creates two things for you: the global object, and the "this" keyword.',
     options: [
       {
@@ -1070,7 +1070,7 @@ export const jsQuestions: TQuestion[] = [
   },
   {
     id: '39',
-    code: '\n',
+    code: '',
     title: '39. Everything in JavaScript is either a...',
     options: [
       {

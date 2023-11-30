@@ -12,7 +12,7 @@ const carousel = ref();
 </script>
 
 <template>
-  <q-page class="row relative-position justify-center">
+  <q-page class="row relative-position justify-center q-pt-lg">
     <q-carousel ref="carousel"
                 animated
                 swipeable
