@@ -4,7 +4,6 @@ import ConfettiExplosion from 'vue-confetti-explosion';
 
 import { TQuestion } from 'app/src';
 import { nextTick, ref } from 'vue';
-import AnswerExplanation from 'components/AnswerExplanation.vue';
 
 const props = defineProps<{ questionData: TQuestion }>();
 const selection = ref();
@@ -62,8 +61,6 @@ const handleOptionSelection = (answer: string) => {
         </div>
       </template>
     </div>
-    <answer-explanation :answer="$props.questionData.answer.value"
-                        :explanation="$props.questionData.answer.explanation"/>
     <q-dialog v-model="explainModal">
       <q-card>
         <q-card-section>

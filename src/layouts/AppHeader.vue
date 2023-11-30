@@ -18,7 +18,7 @@ const appStore = useAppStore();
       />
 
       <q-toolbar-title class="row items-center">
-        <span class="brand text-weight-medium">JS Cards</span>
+        <span class="brand text-weight-medium">Cards</span>
       </q-toolbar-title>
     </q-toolbar>
   </q-header>

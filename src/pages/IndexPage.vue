@@ -1,27 +1,21 @@
-<script setup lang="ts">
-
-import QuizQuestion from 'components/QuizQuestion.vue';
-import questions from 'src/quiz';
-import { ref } from 'vue';
-
-const questionName = ref('question_1');
-
-</script>
-
 <template>
-  <q-page class="row relative-position justify-evenly">
-    <q-carousel v-model="questionName"
-                class="bg-transparent full-width full-height"
-                swipeable>
-      <q-carousel-slide v-bind:key="index" :name="question.name"
-                        class="q-px-none"
-                        v-for="(question, index) in questions">
-        <QuizQuestion :question-data="question"/>
-      </q-carousel-slide>
-    </q-carousel>
+  <q-page class="row relative-position justify-center items-center">
+    <q-jumbotron>
+      <h3 class="q-display-3 text-weight-medium">Hi, devs!</h3>
+      <div class="q-subheading">
+        Explore a vast collection of meticulously crafted multiple-choice questions
+        designed to challenge and refine your JavaScript knowledge. Whether you're
+        a beginner or a seasoned developer, our dynamic quiz layout offers an engaging
+        and fun way to learn, practice, and master JavaScript. Start your journey
+        towards JavaScript expertise today!
+      </div>
+      <hr class="q-hr q-my-lg">
+      <div class="row items-center justify-between">
+        <span class="q-title">Take the Challenge Now!</span>
+        <q-btn to="/quiz" flat color="primary" label="🚀&nbsp; start challenge"/>
+      </div>
+    </q-jumbotron>
   </q-page>
 </template>
-
-<style scoped lang="scss">
-@import "../css/quasar.variables";
-</style>
+<script setup lang="ts">
+</script>

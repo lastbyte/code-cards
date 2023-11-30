@@ -12,7 +12,4 @@
 
 import AppDrawer from 'layouts/AppDrawer.vue';
 import AppHeader from 'layouts/AppHeader.vue';
-import { useAppStore } from 'stores/app-store';
-
-const appStore = useAppStore();
 </script>
