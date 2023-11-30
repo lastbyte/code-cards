@@ -18,7 +18,11 @@ const appStore = useAppStore();
       />
 
       <q-toolbar-title class="row items-center">
-        <span class="brand text-weight-medium">Cards</span>
+        <q-breadcrumbs active-color="white" style="font-size: 16px">
+          <q-breadcrumbs-el v-bind:key="index" v-for="(breadcrumb, index) in appStore.breadcrumb"
+                            class="text-dark" :label="breadcrumb.display"
+                            :to="breadcrumb.to"/>
+        </q-breadcrumbs>
       </q-toolbar-title>
     </q-toolbar>
   </q-header>

@@ -12,10 +12,16 @@
       <hr class="q-hr q-my-lg">
       <div class="row items-center justify-between">
         <span class="q-title">Take the Challenge Now!</span>
-        <q-btn to="/quiz" flat color="primary" label="🚀&nbsp; start challenge"/>
+        <q-btn to="/js-quiz" flat color="primary" label="🚀&nbsp; start challenge"/>
       </div>
     </q-jumbotron>
   </q-page>
 </template>
 <script setup lang="ts">
+import { useAppStore } from 'stores/app-store';
+
+const appStore = useAppStore();
+
+appStore.setBreadcrumb([{ to: '/', display: 'Cards', icon: 'code' }]);
+
 </script>

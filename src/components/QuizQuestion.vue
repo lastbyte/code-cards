@@ -1,9 +1,17 @@
 <script setup lang="ts">
 import CodeDisplay from 'components/CodeDisplay.vue';
 import ConfettiExplosion from 'vue-confetti-explosion';
-
+import { useAppStore } from 'stores/app-store';
 import { TQuestion } from 'app/src';
 import { nextTick, ref } from 'vue';
+
+const appStore = useAppStore();
+
+appStore.setBreadcrumb([{ to: '/', display: 'Cards', icon: 'code' }, {
+  to: '/js-quiz',
+  display: 'Javascript',
+  icon: 'javascript',
+}]);
 
 const props = defineProps<{ questionData: TQuestion }>();
 const selection = ref();

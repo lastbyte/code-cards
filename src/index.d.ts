@@ -9,3 +9,5 @@ export type TQuestion = {
     explanation: string
   },
 }
+
+export type TBreadcrumb = { to: string, display: string, icon: string }
