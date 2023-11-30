@@ -1,11 +1,10 @@
 <script setup lang="ts">
 
 import QuizQuestion from 'components/QuizQuestion.vue';
-import questions from 'src/quiz';
+import { jsQuestions } from 'src/quiz';
 import { ref } from 'vue';
 
-const questionName = ref('question_1');
-
+const questionName = ref('1');
 const carousel = ref();
 
 </script>
@@ -19,10 +18,10 @@ const carousel = ref();
                 transition-next="slide-left"
                 v-model="questionName"
                 class="bg-transparent full-width full-height quiz-carousel">
-      <q-carousel-slide v-bind:key="index" :name="question.name"
+      <q-carousel-slide v-bind:key="index" :name="question.id"
                         class="q-px-none"
-                        v-for="(question, index) in questions">
-        <QuizQuestion :question-data="question"/>
+                        v-for="(question, index) in jsQuestions">
+        <quiz-question :question="question"/>
         <q-carousel-control
           position="top-right"
           :offset="[18, 18]"
