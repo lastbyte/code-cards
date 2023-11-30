@@ -1,7 +1,7 @@
 <template>
   <q-page class="row relative-position justify-center items-center">
-    <q-jumbotron>
-      <h3 class="q-display-3 text-weight-medium">Hi, devs!</h3>
+    <q-jumbotron class="hero">
+      <h3 class="q-display-3 text-weight-medium">Hello, Devs!</h3>
       <div class="q-subheading">
         Explore a vast collection of meticulously crafted multiple-choice questions
         designed to challenge and refine your JavaScript knowledge. Whether you're
@@ -25,3 +25,8 @@ const appStore = useAppStore();
 appStore.setBreadcrumb([{ to: '/', display: 'Cards', icon: 'code' }]);
 
 </script>
+<style scoped>
+.hero {
+  max-width: 500px;
+}
+</style>
