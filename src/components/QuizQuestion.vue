@@ -44,7 +44,7 @@ const handleOptionSelection = (answer: number, correct: boolean) => {
       <q-avatar round color="primary" class="text-weight-bold text-dark">
         {{ $props.question.id }}
       </q-avatar>
-      <span> {{ $props.question.title }}</span>
+      <span class="text-body1"> {{ $props.question.title }}</span>
     </div>
     <div class="row full-width relative-position">
       <code-display v-if="$props.question.code" :code="$props.question.code"></code-display>
@@ -73,11 +73,6 @@ const handleOptionSelection = (answer: number, correct: boolean) => {
       </template>
     </div>
     <answer-explanation :question="question" :open="jsQuizStore.explanation"/>
-
-    <!--    <q-btn fab color="accent" class="fixed-bottom-right show-detail shadow-3"-->
-    <!--           @click="explainModal = true">-->
-    <!--      <q-icon name="settings_suggest" class="text-dark"/>-->
-    <!--    </q-btn>-->
   </div>
 </template>
 

@@ -15,29 +15,14 @@ const carousel = ref();
   <q-page class="row relative-position justify-center q-pt-lg">
     <q-carousel ref="carousel"
                 animated
-                swipeable
-                transition-prev="slide-right"
-                transition-next="slide-left"
+                transition-prev="scale"
+                transition-next="scale"
                 :model-value="jsQuizStore.questionIndex"
                 class="bg-transparent full-width full-height quiz-carousel">
       <q-carousel-slide v-bind:key="index" :name="question.id"
                         class="q-px-none"
                         v-for="(question, index) in jsQuestions">
         <quiz-question :question="question"/>
-        <q-carousel-control
-          position="top-right"
-          :offset="[18, 18]"
-          class="q-gutter-xs"
-        >
-          <q-btn
-            rounded dense color="primary" text-color="black" icon="arrow_left"
-            @click="() => {jsQuizStore.prevQuestion()}"
-          />
-          <q-btn
-            rounded dense color="primary" text-color="black" icon-right="arrow_right"
-            @click="() => {jsQuizStore.nextQuestion()}"
-          />
-        </q-carousel-control>
       </q-carousel-slide>
     </q-carousel>
   </q-page>

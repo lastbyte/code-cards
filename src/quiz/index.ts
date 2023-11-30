@@ -4,7 +4,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '1',
     code: '\nfunction sayHi() {\n  console.log(name);\n  console.log(age);\n  var name = "Lydia";\n  let age = 21;\n}\n\nsayHi();',
-    title: "1. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`Lydia` and `undefined`',
@@ -33,7 +33,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '2',
     code: '\nfor (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 1);\n}\n\nfor (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 1);\n}',
-    title: "2. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`0 1 2` and `0 1 2`',
@@ -57,7 +57,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '3',
     code: '\nconst shape = {\n  radius: 10,\n  diameter() {\n    return this.radius * 2;\n  },\n  perimeter: () => 2 * Math.PI * this.radius\n};\n\nconsole.log(shape.diameter());\nconsole.log(shape.perimeter());',
-    title: "3. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`20` and `62.83185307179586`',
@@ -86,7 +86,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '4',
     code: '\n+true;\n!"Lydia";',
-    title: "4. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`1` and `false`',
@@ -110,7 +110,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '5',
     code: '\nconst bird = {\n  size: "small"\n};\n\nconst mouse = {\n  name: "Mickey",\n  small: true\n};',
-    title: '5. Which one is true?',
+    title: ' Which one is true?',
     options: [
       {
         text: '`mouse.bird.size` is not valid',
@@ -139,7 +139,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '6',
     code: '\nlet c = { greeting: "Hey!" };\nlet d;\n\nd = c;\nc.greeting = "Hello";\nconsole.log(d.greeting);',
-    title: "6. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`Hello`',
@@ -173,7 +173,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '7',
     code: '\nlet a = 3;\nlet b = new Number(3);\nlet c = 3;\n\nconsole.log(a == b);\nconsole.log(a === b);\nconsole.log(b === c);',
-    title: "7. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`true` `false` `true`',
@@ -202,7 +202,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '8',
     code: '\nclass Chameleon {\n  static colorChange(newColor) {\n    this.newColor = newColor;\n    return this.newColor;\n  }\n\n  constructor({ newColor = "green" } = {}) {\n    this.newColor = newColor;\n  }\n}\n\nconst freddie = new Chameleon({ newColor: "purple" });\nconsole.log(freddie.colorChange("orange"));',
-    title: "8. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`orange`',
@@ -231,7 +231,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '9',
     code: '\nlet greeting;\ngreetign = {}; // Typo!\nconsole.log(greetign);',
-    title: "9. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`{}`',
@@ -255,7 +255,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '10',
     code: '\nfunction bark() {\n  console.log("Woof!");\n}\n\nbark.animal = "dog";',
-    title: '10. What happens when we do this?',
+    title: ' What happens when we do this?',
     options: [
       {
         text: 'Nothing, this is totally fine!',
@@ -284,7 +284,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '11',
     code: '\nfunction Person(firstName, lastName) {\n  this.firstName = firstName;\n  this.lastName = lastName;\n}\n\nconst member = new Person("Lydia", "Hallie");\nPerson.getFullName = function() {\n  return `${this.firstName} ${this.lastName}`;\n};\n\nconsole.log(member.getFullName());',
-    title: "11. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`TypeError`',
@@ -313,7 +313,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '12',
     code: '\nfunction Person(firstName, lastName) {\n  this.firstName = firstName;\n  this.lastName = lastName;\n}\n\nconst lydia = new Person("Lydia", "Hallie");\nconst sarah = Person("Sarah", "Smith");\n\nconsole.log(lydia);\nconsole.log(sarah);',
-    title: "12. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`Person {firstName: "Lydia", lastName: "Hallie"}` and `undefined`',
@@ -342,7 +342,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '13',
     code: '',
-    title: '13. What are the three phases of event propagation?',
+    title: ' What are the three phases of event propagation?',
     options: [
       {
         text: 'Target > Capturing > Bubbling',
@@ -371,7 +371,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '14',
     code: '',
-    title: '14. All object have prototypes.',
+    title: ' All object have prototypes.',
     options: [
       {
         text: 'true',
@@ -390,7 +390,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '15',
     code: '\nfunction sum(a, b) {\n  return a + b;\n}\n\nsum(1, "2");',
-    title: "15. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`NaN`',
@@ -419,7 +419,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '16',
     code: '\nlet number = 0;\nconsole.log(number++);\nconsole.log(++number);\nconsole.log(number);',
-    title: "16. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`1` `1` `2`',
@@ -448,7 +448,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '17',
     code: '\nfunction getPersonInfo(one, two, three) {\n  console.log(one);\n  console.log(two);\n  console.log(three);\n}\n\nconst person = "Lydia";\nconst age = 21;\n\ngetPersonInfo`${person} is ${age} years old`;',
-    title: "17. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"Lydia"` `21` `["", " is ", " years old"]`',
@@ -472,7 +472,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '18',
     code: "function checkAge(data) {\n  if (data === { age: 18 }) {\n    console.log(\"You are an adult!\");\n  } else if (data == { age: 18 }) {\n    console.log(\"You are still an adult.\");\n  } else {\n    console.log(`Hmm.. You don't have an age I guess`);\n  }\n}\n\ncheckAge({ age: 18 });",
-    title: "18. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`You are an adult!`',
@@ -496,7 +496,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '19',
     code: '\nfunction getAge(...args) {\n  console.log(typeof args);\n}\n\ngetAge(21);',
-    title: "19. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"number"`',
@@ -525,7 +525,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '20',
     code: '\nfunction getAge() {\n  "use strict";\n  age = 21;\n  console.log(age);\n}\n\ngetAge();',
-    title: "20. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`21`',
@@ -554,7 +554,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '21',
     code: '\nconst sum = eval("10*10+5");',
-    title: "21. What's value of `sum`?",
+    title: " What's value of `sum`?",
     options: [
       {
         text: '`105`',
@@ -583,7 +583,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '22',
     code: '\nsessionStorage.setItem("cool_secret", 123);',
-    title: '22. How long is cool_secret accessible?',
+    title: ' How long is cool_secret accessible?',
     options: [
       {
         text: "Forever, the data doesn't get lost.",
@@ -612,7 +612,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '23',
     code: '\nvar num = 8;\nvar num = 10;\n\nconsole.log(num);',
-    title: "23. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`8`',
@@ -641,7 +641,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '24',
     code: '\nconst obj = { 1: "a", 2: "b", 3: "c" };\nconst set = new Set([1, 2, 3, 4, 5]);\n\nobj.hasOwnProperty("1");\nobj.hasOwnProperty(1);\nset.has("1");\nset.has(1);',
-    title: "24. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`false` `true` `false` `true`',
@@ -670,7 +670,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '25',
     code: '\nconst obj = { a: "one", b: "two", a: "three" };\nconsole.log(obj);',
-    title: "25. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`{ a: "one", b: "two" }`',
@@ -699,7 +699,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '26',
     code: '',
-    title: '26. The JavaScript global execution context creates two things for you: the global object, and the "this" keyword.',
+    title: ' The JavaScript global execution context creates two things for you: the global object, and the "this" keyword.',
     options: [
       {
         text: 'true',
@@ -723,7 +723,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '27',
     code: '\nfor (let i = 1; i < 5; i++) {\n  if (i === 3) continue;\n  console.log(i);\n}',
-    title: "27. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`1` `2`',
@@ -752,7 +752,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '28',
     code: '\nString.prototype.giveLydiaPizza = () => {\n  return "Just give Lydia pizza already!";\n};\n\nconst name = "Lydia";\n\nname.giveLydiaPizza();',
-    title: "28. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"Just give Lydia pizza already!"`',
@@ -781,7 +781,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '29',
     code: '\nconst a = {};\nconst b = { key: "b" };\nconst c = { key: "c" };\n\na[b] = 123;\na[c] = 456;\n\nconsole.log(a[b]);',
-    title: "29. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`123`',
@@ -810,7 +810,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '30',
     code: '\nconst foo = () => console.log("First");\nconst bar = () => setTimeout(() => console.log("Second"));\nconst baz = () => console.log("Third");\n\nbar();\nfoo();\nbaz();',
-    title: "30. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`First` `Second` `Third`',
@@ -839,7 +839,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '31',
     code: "<div onclick=\"console.log('first div')\">\n  <div onclick=\"console.log('second div')\">\n    <button onclick=\"console.log('button')\">\n      Click!\n    </button>\n  </div>\n</div>",
-    title: '31. What is the event.target when clicking the button?',
+    title: ' What is the event.target when clicking the button?',
     options: [
       {
         text: 'Outer `div`',
@@ -868,7 +868,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '32',
     code: "<div onclick=\"console.log('div')\">\n  <p onclick=\"console.log('p')\">\n    Click here!\n  </p>\n</div>",
-    title: "32. When you click the paragraph, what's the logged output?",
+    title: " When you click the paragraph, what's the logged output?",
     options: [
       {
         text: '`p` `div`',
@@ -897,7 +897,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '33',
     code: '\nconst person = { name: "Lydia" };\n\nfunction sayHi(age) {\n  return `${this.name} is ${age}`;\n}\n\nconsole.log(sayHi.call(person, 21));\nconsole.log(sayHi.bind(person, 21));',
-    title: "33. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`undefined is 21` `Lydia is 21`',
@@ -926,7 +926,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '34',
     code: '\nfunction sayHi() {\n  return (() => 0)();\n}\n\nconsole.log(typeof sayHi());',
-    title: "34. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"object"`',
@@ -955,7 +955,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '35',
     code: '\n0;\nnew Number(0);\n("");\n(" ");\nnew Boolean(false);\nundefined;',
-    title: '35. Which of these values are falsy?',
+    title: ' Which of these values are falsy?',
     options: [
       {
         text: "`0`, `''`, `undefined`",
@@ -984,7 +984,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '36',
     code: '\nconsole.log(typeof typeof 1);',
-    title: "36. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"number"`',
@@ -1013,7 +1013,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '37',
     code: '\nconst numbers = [1, 2, 3];\nnumbers[10] = 11;\nconsole.log(numbers);',
-    title: "37. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`[1, 2, 3, 7 x null, 11]`',
@@ -1042,7 +1042,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '38',
     code: '\n(() => {\n  let x, y;\n  try {\n    throw new Error();\n  } catch (x) {\n    (x = 1), (y = 2);\n    console.log(x);\n  }\n  console.log(x);\n  console.log(y);\n})();',
-    title: "38. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`1` `undefined` `2`',
@@ -1071,7 +1071,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '39',
     code: '',
-    title: '39. Everything in JavaScript is either a...',
+    title: ' Everything in JavaScript is either a...',
     options: [
       {
         text: 'primitive or object',
@@ -1100,7 +1100,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '40',
     code: '\n[[0, 1], [2, 3]].reduce(\n  (acc, cur) => {\n    return acc.concat(cur);\n  },\n  [1, 2]\n);',
-    title: "40. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`[0, 1, 2, 3, 1, 2]`',
@@ -1129,7 +1129,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '41',
     code: '\n!!null;\n!!"";\n!!1;',
-    title: "41. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`false` `true` `false`',
@@ -1158,7 +1158,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '42',
     code: '\nsetInterval(() => console.log("Hi"), 1000);',
-    title: '42. What does the `setInterval` method return in the browser?',
+    title: ' What does the `setInterval` method return in the browser?',
     options: [
       {
         text: 'a unique id',
@@ -1187,7 +1187,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '43',
     code: '\n[..."Lydia"];',
-    title: '43. What does this return?',
+    title: ' What does this return?',
     options: [
       {
         text: '`["L", "y", "d", "i", "a"]`',
@@ -1216,7 +1216,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '44',
     code: '\nfunction* generator(i) {\n  yield i;\n  yield i * 2;\n}\n\nconst gen = generator(10);\n\nconsole.log(gen.next().value);\nconsole.log(gen.next().value);',
-    title: "44. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`[0, 10], [10, 20]`',
@@ -1245,7 +1245,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '45',
     code: '\nconst firstPromise = new Promise((res, rej) => {\n  setTimeout(res, 500, "one");\n});\n\nconst secondPromise = new Promise((res, rej) => {\n  setTimeout(res, 100, "two");\n});\n\nPromise.race([firstPromise, secondPromise]).then(res => console.log(res));',
-    title: '45. What does this return?',
+    title: ' What does this return?',
     options: [
       {
         text: '`"one"`',
@@ -1274,7 +1274,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '46',
     code: '\nlet person = { name: "Lydia" };\nconst members = [person];\nperson = null;\n\nconsole.log(members);',
-    title: "46. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`null`',
@@ -1303,7 +1303,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '47',
     code: '\nconst person = {\n  name: "Lydia",\n  age: 21\n};\n\nfor (const item in person) {\n  console.log(item);\n}',
-    title: "47. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`{ name: "Lydia" }, { age: 21 }`',
@@ -1332,7 +1332,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '48',
     code: '\nconsole.log(3 + 4 + "5");',
-    title: "48. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"345"`',
@@ -1361,7 +1361,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '49',
     code: '\nconst num = parseInt("7*6", 10);',
-    title: "49. What's the value of `num`?",
+    title: " What's the value of `num`?",
     options: [
       {
         text: '`42`',
@@ -1390,7 +1390,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '50',
     code: '\n[1, 2, 3].map(num => {\n  if (typeof num === "number") return;\n  return num * 2;\n});',
-    title: "50. What's the output`?",
+    title: " What's the output`?",
     options: [
       {
         text: '`[]`',
@@ -1419,7 +1419,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '51',
     code: '\nfunction getInfo(member, year) {\n  member.name = "Lydia";\n  year = "1998";\n}\n\nconst person = { name: "Sarah" };\nconst birthYear = "1997";\n\ngetInfo(person, birthYear);\n\nconsole.log(person, birthYear);',
-    title: "51. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`{ name: "Lydia" }, "1997"`',
@@ -1448,7 +1448,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '52',
     code: '\nfunction greeting() {\n  throw "Hello world!";\n}\n\nfunction sayHi() {\n  try {\n    const data = greeting();\n    console.log("It worked!", data);\n  } catch (e) {\n    console.log("Oh no an error:", e);\n  }\n}\n\nsayHi();',
-    title: "52. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`It worked! Hello world!`',
@@ -1477,7 +1477,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '53',
     code: '\nfunction Car() {\n  this.make = "Lamborghini";\n  return { make: "Maserati" };\n}\n\nconst myCar = new Car();\nconsole.log(myCar.make);',
-    title: "53. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"Lamborghini"`',
@@ -1506,7 +1506,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '54',
     code: '\n(() => {\n  let x = (y = 10);\n})();\n\nconsole.log(typeof x);\nconsole.log(typeof y);',
-    title: "54. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"undefined", "number"`',
@@ -1535,7 +1535,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '55',
     code: '\nclass Dog {\n  constructor(name) {\n    this.name = name;\n  }\n}\n\nDog.prototype.bark = function() {\n  console.log(`Woof I am ${this.name}`);\n};\n\nconst pet = new Dog("Mara");\n\npet.bark();\n\ndelete Dog.prototype.bark;\n\npet.bark();',
-    title: "55. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"Woof I am Mara"`, `TypeError`',
@@ -1564,7 +1564,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '56',
     code: '\nconst set = new Set([1, 1, 2, 3, 4]);\n\nconsole.log(set);',
-    title: "56. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`[1, 1, 2, 3, 4]`',
@@ -1593,7 +1593,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '57',
     code: '\n// counter.js\nlet counter = 10;\nexport default counter;',
-    title: "57. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`10`',
@@ -1622,7 +1622,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '58',
     code: '\nconst name = "Lydia";\nage = 21;\n\nconsole.log(delete name);\nconsole.log(delete age);',
-    title: "58. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`false`, `true`',
@@ -1651,7 +1651,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '59',
     code: '\nconst numbers = [1, 2, 3, 4, 5];\nconst [y] = numbers;\n\nconsole.log(y);',
-    title: "59. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`[[1, 2, 3, 4, 5]]`',
@@ -1680,7 +1680,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '60',
     code: '\nconst user = { name: "Lydia", age: 21 };\nconst admin = { admin: true, ...user };\n\nconsole.log(admin);',
-    title: "60. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`{ admin: true, user: { name: "Lydia", age: 21 } }`',
@@ -1709,7 +1709,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '61',
     code: '\nconst person = { name: "Lydia" };\n\nObject.defineProperty(person, "age", { value: 21 });\n\nconsole.log(person);\nconsole.log(Object.keys(person));',
-    title: "61. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`{ name: "Lydia", age: 21 }`, `["name", "age"]`',
@@ -1738,7 +1738,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '62',
     code: '\nconst settings = {\n  username: "lydiahallie",\n  level: 19,\n  health: 90\n};\n\nconst data = JSON.stringify(settings, ["level", "health"]);\nconsole.log(data);',
-    title: "62. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"{"level":19, "health":90}"`',
@@ -1767,7 +1767,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '63',
     code: '\nlet num = 10;\n\nconst increaseNumber = () => num++;\nconst increasePassedNumber = number => number++;\n\nconst num1 = increaseNumber();\nconst num2 = increasePassedNumber(num1);\n\nconsole.log(num1);\nconsole.log(num2);',
-    title: "63. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`10`, `10`',
@@ -1796,7 +1796,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '64',
     code: '\nconst value = { number: 10 };\n\nconst multiply = (x = { ...value }) => {\n  console.log((x.number *= 2));\n};\n\nmultiply();\nmultiply();\nmultiply(value);\nmultiply(value);',
-    title: "64. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`20`, `40`, `80`, `160`',
@@ -1825,7 +1825,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '65',
     code: '\n[1, 2, 3, 4].reduce((x, y) => console.log(x, y));',
-    title: "65. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`1` `2` and `3` `3` and `6` `4`',
@@ -1854,7 +1854,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '66',
     code: '\nclass Dog {\n  constructor(name) {\n    this.name = name;\n  }\n};\n\nclass Labrador extends Dog {\n  // 1 \n  constructor(name, size) {\n    this.size = size;\n  }\n  // 2\n  constructor(name, size) {\n    super(name);\n    this.size = size;\n  }\n  // 3\n  constructor(size) {\n    super(name);\n    this.size = size;\n  }\n  // 4 \n  constructor(name, size) {\n    this.name = name;\n    this.size = size;\n  }\n\n};',
-    title: '66. With which constructor can we successfully extend the `Dog` class?',
+    title: ' With which constructor can we successfully extend the `Dog` class?',
     options: [
       {
         text: '1',
@@ -1883,7 +1883,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '67',
     code: "// index.js\nconsole.log('running index.js');\nimport { sum } from './sum.js';\nconsole.log(sum(1, 2));\n\n// sum.js\nconsole.log('running sum.js');\nexport const sum = (a, b) => a + b;",
-    title: "67. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`running index.js`, `running sum.js`, `3`',
@@ -1912,7 +1912,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '68',
     code: "console.log(Number(2) === Number(2))\nconsole.log(Boolean(false) === Boolean(false))\nconsole.log(Symbol('foo') === Symbol('foo'))",
-    title: "68. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`true`, `true`, `false`',
@@ -1941,7 +1941,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '69',
     code: '\nconst name = "Lydia Hallie"\nconsole.log(name.padStart(13))\nconsole.log(name.padStart(2))',
-    title: "69. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"Lydia Hallie"`, `"Lydia Hallie"`',
@@ -1970,7 +1970,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '70',
     code: '\nconsole.log("🥑" + "💻");',
-    title: "70. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"🥑💻"`',
@@ -1999,7 +1999,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '71',
     code: "function* startGame() {\n  const answer = yield \"Do you love JavaScript?\";\n  if (answer !== \"Yes\") {\n    return \"Oh wow... Guess we're gone here\";\n  }\n  return \"JavaScript loves you back ❤️\";\n}\n\nconst game = startGame();\nconsole.log(/* 1 */); // Do you love JavaScript?\nconsole.log(/* 2 */); // JavaScript loves you back ❤️",
-    title: '71. How can we log the values that are commented out after the console.log statement?',
+    title: ' How can we log the values that are commented out after the console.log statement?',
     options: [
       {
         text: '`game.next("Yes").value` and `game.next().value`',
@@ -2028,7 +2028,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '72',
     code: '\nconsole.log(String.raw`Hello\\nworld`);',
-    title: "72. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`Hello world!`',
@@ -2057,7 +2057,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '73',
     code: '\nasync function getData() {\n  return await Promise.resolve("I made it!");\n}\n\nconst data = getData();\nconsole.log(data);',
-    title: "73. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"I made it!"`',
@@ -2086,7 +2086,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '74',
     code: '\nfunction addToList(item, list) {\n  return list.push(item);\n}\n\nconst result = addToList("apple", ["banana"]);\nconsole.log(result);',
-    title: "74. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: "`['apple', 'banana']`",
@@ -2115,7 +2115,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '75',
     code: '\nconst box = { x: 10, y: 20 };\n\nObject.freeze(box);\n\nconst shape = box;\nshape.x = 100;\n\nconsole.log(shape);',
-    title: "75. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`{ x: 100, y: 20 }`',
@@ -2144,7 +2144,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '76',
     code: '\nconst { name: myName } = { name: "Lydia" };\n\nconsole.log(name);',
-    title: "76. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"Lydia"`',
@@ -2173,7 +2173,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '77',
     code: '\nfunction sum(a, b) {\n  return a + b;\n}',
-    title: '77. Is this a pure function?',
+    title: ' Is this a pure function?',
     options: [
       {
         text: 'Yes',
@@ -2192,7 +2192,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '78',
     code: '\nconst add = () => {\n  const cache = {};\n  return num => {\n    if (num in cache) {\n      return `From cache! ${cache[num]}`;\n    } else {\n      const result = num + 10;\n      cache[num] = result;\n      return `Calculated! ${result}`;\n    }\n  };\n};\n\nconst addFunction = add();\nconsole.log(addFunction(10));\nconsole.log(addFunction(10));\nconsole.log(addFunction(5 * 2));',
-    title: '78. What is the output?',
+    title: ' What is the output?',
     options: [
       {
         text: '`Calculated! 20` `Calculated! 20` `Calculated! 20`',
@@ -2221,7 +2221,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '79',
     code: '\nconst myLifeSummedUp = ["☕", "💻", "🍷", "🍫"]\n\nfor (let item in myLifeSummedUp) {\n  console.log(item)\n}\n\nfor (let item of myLifeSummedUp) {\n  console.log(item)\n}',
-    title: '79. What is the output?',
+    title: ' What is the output?',
     options: [
       {
         text: '`0` `1` `2` `3` and `"☕"` ` "💻"` `"🍷"` `"🍫"`',
@@ -2250,7 +2250,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '80',
     code: '\nconst list = [1 + 2, 1 * 2, 1 / 2]\nconsole.log(list)',
-    title: '80. What is the output?',
+    title: ' What is the output?',
     options: [
       {
         text: '`["1 + 2", "1 * 2", "1 / 2"]`',
@@ -2279,7 +2279,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '81',
     code: '\nfunction sayHi(name) {\n  return `Hi there, ${name}`\n}\n\nconsole.log(sayHi())',
-    title: '81. What is the output?',
+    title: ' What is the output?',
     options: [
       {
         text: '`Hi there, `',
@@ -2308,7 +2308,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '82',
     code: '\nvar status = "😎"\n\nsetTimeout(() => {\n  const status = "😍"\n\n  const data = {\n    status: "🥑",\n    getStatus() {\n      return this.status\n    }\n  }\n\n  console.log(data.getStatus())\n  console.log(data.getStatus.call(this))\n}, 0)',
-    title: '82. What is the output?',
+    title: ' What is the output?',
     options: [
       {
         text: '`"🥑"` and `"😍"`',
@@ -2337,7 +2337,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '83',
     code: '\nconst person = {\n  name: "Lydia",\n  age: 21\n}\n\nlet city = person.city\ncity = "Amsterdam"\n\nconsole.log(person)',
-    title: '83. What is the output?',
+    title: ' What is the output?',
     options: [
       {
         text: '`{ name: "Lydia", age: 21 }`',
@@ -2366,7 +2366,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '84',
     code: "function checkAge(age) {\n  if (age < 18) {\n    const message = \"Sorry, you're too young.\"\n  } else {\n    const message = \"Yay! You're old enough!\"\n  }\n\n  return message\n}\n\nconsole.log(checkAge(21))",
-    title: '84. What is the output?',
+    title: ' What is the output?',
     options: [
       {
         text: "`\"Sorry, you're too young.\"`",
@@ -2395,7 +2395,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '85',
     code: "fetch('https://www.website.com/api/user/1')\n  .then(res => res.json())\n  .then(res => console.log(res))",
-    title: '85. What kind of information would get logged?',
+    title: ' What kind of information would get logged?',
     options: [
       {
         text: 'The result of the `fetch` method.',
@@ -2424,7 +2424,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '86',
     code: '\nfunction getName(name) {\n  const hasName = //\n}',
-    title: '86. Which option is a way to set `hasName` equal to `true`, provided you cannot pass `true` as an argument?',
+    title: ' Which option is a way to set `hasName` equal to `true`, provided you cannot pass `true` as an argument?',
     options: [
       {
         text: '`!!name`',
@@ -2453,7 +2453,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '87',
     code: '\nconsole.log("I want pizza"[0])',
-    title: "87. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"""`',
@@ -2482,7 +2482,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '88',
     code: '\nfunction sum(num1, num2 = num1) {\n  console.log(num1 + num2)\n}\n\nsum(10)',
-    title: "88. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`NaN`',
@@ -2511,7 +2511,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '89',
     code: '\n// module.js \nexport default () => "Hello world"\nexport const name = "Lydia"\n\n// index.js \nimport * as data from "./module"\n\nconsole.log(data)',
-    title: "89. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`{ default: function default(), name: "Lydia" }`',
@@ -2540,7 +2540,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '90',
     code: '\nclass Person {\n  constructor(name) {\n    this.name = name\n  }\n}\n\nconst member = new Person("John")\nconsole.log(typeof member)',
-    title: "90. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"class"`',
@@ -2569,7 +2569,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '91',
     code: '\nlet newList = [1, 2, 3].push(4)\n\nconsole.log(newList.push(5))',
-    title: "91. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`[1, 2, 3, 4, 5]`',
@@ -2598,7 +2598,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '92',
     code: "function giveLydiaPizza() {\n  return \"Here is pizza!\"\n}\n\nconst giveLydiaChocolate = () => \"Here's chocolate... now go hit the gym already.\"\n\nconsole.log(giveLydiaPizza.prototype)\nconsole.log(giveLydiaChocolate.prototype)",
-    title: "92. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`{ constructor: ...}` `{ constructor: ...}`',
@@ -2627,7 +2627,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '93',
     code: '\nconst person = {\n  name: "Lydia",\n  age: 21\n}\n\nfor (const [x, y] of Object.entries(person)) {\n  console.log(x, y)\n}',
-    title: "93. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`name` `Lydia` and `age` `21`',
@@ -2656,7 +2656,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '94',
     code: '\nfunction getItems(fruitList, ...args, favoriteFruit) {\n  return [...fruitList, ...args, favoriteFruit]\n}\n\ngetItems(["banana", "apple"], "pear", "orange")',
-    title: "94. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`["banana", "apple", "pear", "orange"]`',
@@ -2685,7 +2685,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '95',
     code: "function nums(a, b) {\n  if\n  (a > b)\n  console.log('a is bigger')\n  else \n  console.log('b is bigger')\n  return \n  a + b\n}\n\nconsole.log(nums(4, 2))\nconsole.log(nums(1, 2))",
-    title: "95. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`a is bigger`, `6` and `b is bigger`, `3`',
@@ -2714,7 +2714,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '96',
     code: '\nclass Person {\n  constructor() {\n    this.name = "Lydia"\n  }\n}\n\nPerson = class AnotherPerson {\n  constructor() {\n    this.name = "Sarah"\n  }\n}\n\nconst member = new Person()\nconsole.log(member.name)',
-    title: "96. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"Lydia"`',
@@ -2743,7 +2743,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '97',
     code: "const info = {\n  [Symbol('a')]: 'b'\n}\n\nconsole.log(info)\nconsole.log(Object.keys(info))",
-    title: "97. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: "`{Symbol('a'): 'b'}` and `[\"{Symbol('a')\"]`",
@@ -2772,7 +2772,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '98',
     code: '\nconst getList = ([x, ...y]) => [x, y]\nconst getUser = user => { name: user.name, age: user.age }\n\nconst list = [1, 2, 3, 4]\nconst user = { name: "Lydia", age: 21 }\n\nconsole.log(getList(list))\nconsole.log(getUser(user))',
-    title: "98. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`[1, [2, 3, 4]]` and `undefined`',
@@ -2801,7 +2801,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '99',
     code: '\nconst name = "Lydia"\n\nconsole.log(name())',
-    title: "99. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`SyntaxError`',
@@ -2830,7 +2830,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '100',
     code: "// 🎉✨ This is my 100th question! ✨🎉\n\nconst output = `${[] && 'Im'}possible!\nYou should${'' && `n't`} see a therapist after so much JavaScript lol`",
-    title: "100. What's the value of output?",
+    title: " What's the value of output?",
     options: [
       {
         text: '`possible! You should see a therapist after so much JavaScript lol`',
@@ -2859,7 +2859,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '101',
     code: '\nconst one = (false || {} || null)\nconst two = (null || false || "")\nconst three = ([] || 0 || true)\n\nconsole.log(one, two, three)',
-    title: "101. What's the value of output?",
+    title: " What's the value of output?",
     options: [
       {
         text: '`false` `null` `[]`',
@@ -2888,7 +2888,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '102',
     code: "const myPromise = () => Promise.resolve('I have resolved!')\n\nfunction firstFunction() {\n  myPromise().then(res => console.log(res))\n  console.log('second')\n}\n\nasync function secondFunction() {\n  console.log(await myPromise())\n  console.log('second')\n}\n\nfirstFunction()\nsecondFunction()",
-    title: "102. What's the value of output?",
+    title: " What's the value of output?",
     options: [
       {
         text: '`I have resolved!`, `second` and `I have resolved!`, `second`',
@@ -2917,7 +2917,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '103',
     code: '\nconst set = new Set()\n\nset.add(1)\nset.add("Lydia")\nset.add({ name: "Lydia" })\n\nfor (let item of set) {\n  console.log(item + 2)\n}',
-    title: "103. What's the value of output?",
+    title: " What's the value of output?",
     options: [
       {
         text: '`3`, `NaN`, `NaN`',
@@ -2946,7 +2946,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '104',
     code: '\nPromise.resolve(5)',
-    title: "104. What's its value?",
+    title: " What's its value?",
     options: [
       {
         text: '`5`',
@@ -2975,7 +2975,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '105',
     code: '\nfunction compareMembers(person1, person2 = person) {\n  if (person1 !== person2) {\n    console.log("Not the same!")\n  } else {\n    console.log("They are the same!")\n  }\n}\n\nconst person = { name: "Lydia" }\n\ncompareMembers(person)',
-    title: "105. What's its value?",
+    title: " What's its value?",
     options: [
       {
         text: '`Not the same!`',
@@ -3004,7 +3004,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '106',
     code: '\nconst colorConfig = {\n  red: true,\n  blue: false,\n  green: true,\n  black: true,\n  yellow: false,\n}\n\nconst colors = ["pink", "red", "blue"]\n\nconsole.log(colorConfig.colors[1])',
-    title: "106. What's its value?",
+    title: " What's its value?",
     options: [
       {
         text: '`true`',
@@ -3033,7 +3033,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '107',
     code: "console.log('❤️' === '❤️')",
-    title: "107. What's its value?",
+    title: " What's its value?",
     options: [
       {
         text: '`true`',
@@ -3052,7 +3052,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '108',
     code: "const emojis = ['✨', '🥑', '😍']\n\nemojis.map(x => x + '✨')\nemojis.filter(x => x !== '🥑')\nemojis.find(x => x !== '🥑')\nemojis.reduce((acc, cur) => acc + '✨')\nemojis.slice(1, 2, '✨') \nemojis.splice(1, 2, '✨')",
-    title: '108. Which of these methods modifies the original array?',
+    title: ' Which of these methods modifies the original array?',
     options: [
       {
         text: '`All of them`',
@@ -3081,7 +3081,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '109',
     code: "const food = ['🍕', '🍫', '🥑', '🍔']\nconst info = { favoriteFood: food[0] }\n\ninfo.favoriteFood = '🍝'\n\nconsole.log(food)",
-    title: "109. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: "`['🍕', '🍫', '🥑', '🍔']`",
@@ -3110,7 +3110,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '110',
     code: '\nJSON.parse()',
-    title: '110. What does this method do?',
+    title: ' What does this method do?',
     options: [
       {
         text: 'Parses JSON to a JavaScript value',
@@ -3139,7 +3139,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '111',
     code: "let name = 'Lydia'\n\nfunction getName() {\n  console.log(name)\n  let name = 'Sarah'\n}\n\ngetName()",
-    title: "111. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: 'Lydia',
@@ -3168,7 +3168,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '112',
     code: "function* generatorOne() {\n  yield ['a', 'b', 'c'];\n}\n\nfunction* generatorTwo() {\n  yield* ['a', 'b', 'c'];\n}\n\nconst one = generatorOne()\nconst two = generatorTwo()\n\nconsole.log(one.next().value)\nconsole.log(two.next().value)",
-    title: "112. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`a` and `a`',
@@ -3197,7 +3197,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '113',
     code: "console.log(`${(x => x)('I love')} to program`)",
-    title: "113. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`I love to program`',
@@ -3226,7 +3226,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '114',
     code: "let config = {\n  alert: setInterval(() => {\n    console.log('Alert!')\n  }, 1000)\n}\n\nconfig = null",
-    title: '114. What will happen?',
+    title: ' What will happen?',
     options: [
       {
         text: "The `setInterval` callback won't be invoked",
@@ -3255,7 +3255,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '115',
     code: "const myMap = new Map()\nconst myFunc = () => 'greeting'\n\nmyMap.set(myFunc, 'Hello world!')\n\n//1\nmyMap.get('greeting')\n//2\nmyMap.get(myFunc)\n//3\nmyMap.get(() => 'greeting')",
-    title: "115. Which method(s) will return the value `'Hello world!'`?",
+    title: " Which method(s) will return the value `'Hello world!'`?",
     options: [
       {
         text: '1',
@@ -3284,7 +3284,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '116',
     code: '\nconst person = {\n  name: "Lydia",\n  age: 21\n}\n\nconst changeAge = (x = { ...person }) => x.age += 1\nconst changeAgeAndName = (x = { ...person }) => {\n  x.age += 1\n  x.name = "Sarah"\n}\n\nchangeAge(person)\nchangeAgeAndName()\n\nconsole.log(person)',
-    title: "116. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`{name: "Sarah", age: 22}`',
@@ -3313,7 +3313,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '117',
     code: '\nfunction sumValues(x, y, z) {\n\treturn x + y + z;\n}',
-    title: '117. Which of the following options will return `6`?',
+    title: ' Which of the following options will return `6`?',
     options: [
       {
         text: '`sumValues([...1, 2, 3])`',
@@ -3342,7 +3342,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '118',
     code: '\nlet num = 1;\nconst list = ["🥳", "🤠", "🥰", "🤪"];\n\nconsole.log(list[(num += 1)]);',
-    title: "118. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`🤠`',
@@ -3371,7 +3371,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '119',
     code: '\nconst person = {\n\tfirstName: "Lydia",\n\tlastName: "Hallie",\n\tpet: {\n\t\tname: "Mara",\n\t\tbreed: "Dutch Tulip Hound"\n\t},\n\tgetFullName() {\n\t\treturn `${this.firstName} ${this.lastName}`;\n\t}\n};\n\nconsole.log(person.pet?.name);\nconsole.log(person.pet?.family?.name);\nconsole.log(person.getFullName?.());\nconsole.log(member.getLastName?.());',
-    title: "119. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`undefined` `undefined` `undefined` `undefined`',
@@ -3400,7 +3400,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '120',
     code: "const groceries = [\"banana\", \"apple\", \"peanuts\"];\n\nif (groceries.indexOf(\"banana\")) {\n\tconsole.log(\"We have to buy bananas!\");\n} else {\n\tconsole.log(`We don't have to buy bananas!`);\n}",
-    title: "120. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: 'We have to buy bananas!',
@@ -3429,7 +3429,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '121',
     code: '\nconst config = {\n\tlanguages: [],\n\tset language(lang) {\n\t\treturn this.languages.push(lang);\n\t}\n};\n\nconsole.log(config.language);',
-    title: "121. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`function language(lang) { this.languages.push(lang }`',
@@ -3458,7 +3458,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '122',
     code: '\nconst name = "Lydia Hallie";\n\nconsole.log(!typeof name === "object");\nconsole.log(!typeof name === "string");',
-    title: "122. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`false` `true`',
@@ -3487,7 +3487,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '123',
     code: '\nconst add = x => y => z => {\n\tconsole.log(x, y, z);\n\treturn x + y + z;\n};\n\nadd(4)(5)(6);',
-    title: "123. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`4` `5` `6`',
@@ -3516,7 +3516,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '124',
     code: '\nasync function* range(start, end) {\n\tfor (let i = start; i <= end; i++) {\n\t\tyield Promise.resolve(i);\n\t}\n}\n\n(async () => {\n\tconst gen = range(1, 3);\n\tfor await (const item of gen) {\n\t\tconsole.log(item);\n\t}\n})();',
-    title: "124. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`Promise {1}` `Promise {2}` `Promise {3}`',
@@ -3545,7 +3545,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '125',
     code: '\nconst myFunc = ({ x, y, z }) => {\n\tconsole.log(x, y, z);\n};\n\nmyFunc(1, 2, 3);',
-    title: "125. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`1` `2` `3`',
@@ -3574,7 +3574,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '126',
     code: "function getFine(speed, amount) {\n  const formattedSpeed = new Intl.NumberFormat({\n    'en-US',\n    { style: 'unit', unit: 'mile-per-hour' }\n  }).format(speed)\n\n  const formattedAmount = new Intl.NumberFormat({\n    'en-US',\n    { style: 'currency', currency: 'USD' }\n  }).format(amount)\n\n  return `The driver drove ${formattedSpeed} and has to pay ${formattedAmount}`\n}\n\nconsole.log(getFine(130, 300))",
-    title: "126. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: 'The driver drove 130 and has to pay 300',
@@ -3603,7 +3603,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '127',
     code: '\nconst spookyItems = ["👻", "🎃", "🕸"];\n({ item: spookyItems[3] } = { item: "💀" });\n\nconsole.log(spookyItems);',
-    title: "127. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`["👻", "🎃", "🕸"]`',
@@ -3632,7 +3632,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '128',
     code: '\nconst name = "Lydia Hallie";\nconst age = 21;\n\nconsole.log(Number.isNaN(name));\nconsole.log(Number.isNaN(age));\n\nconsole.log(isNaN(name));\nconsole.log(isNaN(age));',
-    title: "128. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`true` `false` `true` `false`',
@@ -3661,7 +3661,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '129',
     code: '\nconst randomValue = 21;\n\nfunction getInfo() {\n\tconsole.log(typeof randomValue);\n\tconst randomValue = "Lydia Hallie";\n}\n\ngetInfo();',
-    title: "129. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`"number"`',
@@ -3690,7 +3690,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '130',
     code: "const myPromise = Promise.resolve(\"Woah some cool data\");\n\n(async () => {\n\ttry {\n\t\tconsole.log(await myPromise);\n\t} catch {\n\t\tthrow new Error(`Oops didn't work`);\n\t} finally {\n\t\tconsole.log(\"Oh finally!\");\n\t}\n})();",
-    title: "130. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`Woah some cool data`',
@@ -3719,7 +3719,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '131',
     code: '\nconst emojis = ["🥑", ["✨", "✨", ["🍕", "🍕"]]];\n\nconsole.log(emojis.flat(1));',
-    title: "131. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: "`['🥑', ['✨', '✨', ['🍕', '🍕']]]`",
@@ -3777,7 +3777,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '133',
     code: '\nconst myPromise = Promise.resolve(Promise.resolve("Promise!"));\n\nfunction funcOne() {\n\tmyPromise.then(res => res).then(res => console.log(res));\n\tsetTimeout(() => console.log("Timeout!", 0));\n\tconsole.log("Last line!");\n}\n\nasync function funcTwo() {\n\tconst res = await myPromise;\n\tconsole.log(await res);\n\tsetTimeout(() => console.log("Timeout!", 0));\n\tconsole.log("Last line!");\n}\n\nfuncOne();\nfuncTwo();',
-    title: "133. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`Promise! Last line! Promise! Last line! Last line! Promise!`',
@@ -3806,7 +3806,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '134',
     code: '\n// sum.js\nexport default function sum(x) {\n\treturn x + x;\n}\n\n// index.js\nimport * as sum from "./sum";',
-    title: '134. How can we invoke `sum` in `index.js` from `sum.js?`',
+    title: ' How can we invoke `sum` in `index.js` from `sum.js?`',
     options: [
       {
         text: '`sum(4)`',
@@ -3835,7 +3835,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '135',
     code: '\nconst handler = {\n\tset: () => console.log("Added a new property!"),\n\tget: () => console.log("Accessed a property!")\n};\n\nconst person = new Proxy({}, handler);\n\nperson.name = "Lydia";\nperson.name;',
-    title: "135. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`Added a new property!`',
@@ -3864,7 +3864,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '136',
     code: '\nconst person = { name: "Lydia Hallie" };\n\nObject.seal(person);',
-    title: '136. Which of the following will modify the `person` object?',
+    title: ' Which of the following will modify the `person` object?',
     options: [
       {
         text: '`person.name = "Evan Bacon"`',
@@ -3893,7 +3893,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '137',
     code: '\nconst person = {\n\tname: "Lydia Hallie",\n\taddress: {\n\t\tstreet: "100 Main St"\n\t}\n};\n\nObject.freeze(person);',
-    title: '137. Which of the following will modify the `person` object?',
+    title: ' Which of the following will modify the `person` object?',
     options: [
       {
         text: '`person.name = "Evan Bacon"`',
@@ -3922,7 +3922,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '138',
     code: '\nconst add = x => x + x;\n\nfunction myFunc(num = 2, value = add(num)) {\n\tconsole.log(num, value);\n}\n\nmyFunc();\nmyFunc(3);',
-    title: "138. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`2` `4` and `3` `6`',
@@ -3951,7 +3951,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '139',
     code: '\nclass Counter {\n  #number = 10\n\n  increment() {\n    this.#number++\n  }\n\n  getNum() {\n    return this.#number\n  }\n}\n\nconst counter = new Counter()\ncounter.increment()\n\nconsole.log(counter.#number)',
-    title: "139. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`10`',
@@ -3980,7 +3980,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '140',
     code: '\nconst teams = [\n\t{ name: "Team 1", members: ["Paul", "Lisa"] },\n\t{ name: "Team 2", members: ["Laura", "Tim"] }\n];\n\nfunction* getMembers(members) {\n\tfor (let i = 0; i < members.length; i++) {\n\t\tyield members[i];\n\t}\n}\n\nfunction* getTeams(teams) {\n\tfor (let i = 0; i < teams.length; i++) {\n\t\t// ✨ SOMETHING IS MISSING HERE ✨\n\t}\n}\n\nconst obj = getTeams(teams);\nobj.next(); // { value: "Paul", done: false }\nobj.next(); // { value: "Lisa", done: false }',
-    title: "140. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`yield getMembers(teams[i].members)`',
@@ -4009,7 +4009,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '141',
     code: '\nconst person = {\n\tname: "Lydia Hallie",\n\thobbies: ["coding"]\n};\n\nfunction addHobby(hobby, hobbies = person.hobbies) {\n\thobbies.push(hobby);\n\treturn hobbies;\n}\n\naddHobby("running", []);\naddHobby("dancing");\naddHobby("baking", person.hobbies);\n\nconsole.log(person.hobbies);',
-    title: "141. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: '`["coding"]`',
@@ -4038,7 +4038,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '142',
     code: "class Bird {\n\tconstructor() {\n\t\tconsole.log(\"I'm a bird. 🦢\");\n\t}\n}\n\nclass Flamingo extends Bird {\n\tconstructor() {\n\t\tconsole.log(\"I'm pink. 🌸\");\n\t\tsuper();\n\t}\n}\n\nconst pet = new Flamingo();",
-    title: "142. What's the output?",
+    title: " What's the output?",
     options: [
       {
         text: "`I'm pink. 🌸`",
@@ -4067,7 +4067,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '143',
     code: '\nconst emojis = ["🎄", "🎅🏼", "🎁", "⭐"];\n\n/* 1 */ emojis.push("🦌");\n/* 2 */ emojis.splice(0, 2);\n/* 3 */ emojis = [...emojis, "🥂"];\n/* 4 */ emojis.length = 0;',
-    title: '143. Which of the options result(s) in an error?',
+    title: ' Which of the options result(s) in an error?',
     options: [
       {
         text: '1',
@@ -4096,7 +4096,7 @@ export const jsQuestions: TQuestion[] = [
   {
     id: '144',
     code: '\nconst person = {\n  name: "Lydia Hallie",\n  age: 21\n}\n\n[...person] // ["Lydia Hallie", 21]',
-    title: '144. What do we need to add to the `person` object to get `["Lydia Hallie", 21]` as the output of `[...person]`?',
+    title: ' What do we need to add to the `person` object to get `["Lydia Hallie", 21]` as the output of `[...person]`?',
     options: [
       {
         text: 'Nothing, object are iterable by default',
