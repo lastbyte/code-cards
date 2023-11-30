@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import CodeDisplay from 'components/CodeDisplay.vue';
 import { useAppStore } from 'stores/app-store';
-import { TQuestion } from 'app/src';
+import { Dictionary, TQuestion } from 'app/src';
 import { nextTick, ref } from 'vue';
 import MarkdownRenderer from 'components/MarkdownRenderer.vue';
 import AnswerExplanation from 'components/AnswerExplanation.vue';
@@ -18,11 +18,12 @@ appStore.setBreadcrumb([{ to: '/', display: 'Cards', icon: 'code' }, {
 }]);
 
 const props = defineProps<{ question: TQuestion }>();
-const selection = ref();
 const confettiVisible = ref(false);
 
 const handleOptionSelection = (answer: number, correct: boolean) => {
-  selection.value = answer;
+  const selectedAnswer: Dictionary = {};
+  selectedAnswer[props.question.id] = answer;
+  jsQuizStore.saveSelectedAnswers(selectedAnswer);
   if (correct) {
     setTimeout(() => {
       jsQuizStore.toggleExplanation();
@@ -54,16 +55,17 @@ const handleOptionSelection = (answer: number, correct: boolean) => {
       <template v-bind:key="index"
                 v-for="(option, index) in $props.question.options">
         <div class="row full-width tapred justify-between"
-             :class="selection === index  ? option.correct?
+             :class="jsQuizStore.selectedAnswers[props.question.id] === index  ? option.correct?
               'bg-green-2 text-positive' : 'bg-red-2 text-negative' : ''">
           <q-checkbox
-            class="q-pa-sm tapred option full-width option bg-code"
-            :color="selection === index  ? option.correct?
+            class="q-pa-sm tapred option full-width option"
+            :color="jsQuizStore.selectedAnswers[props.question.id] === index  ? option.correct?
               'positive' : 'negative' : ''"
-            :model-value="selection === index"
+            :model-value="jsQuizStore.selectedAnswers[props.question.id] === index"
             :checked-icon="option.correct ? 'task_alt' : 'highlight_off'"
             unchecked-icon="radio_button_unchecked"
-            :aria-selected="selection === index? 'true' : 'false'"
+            :aria-selected="jsQuizStore.selectedAnswers[props.question.id] === index
+            ? 'true' : 'false'"
             :aria-correct="option.correct ? 'true' : 'false'"
             @click="(e) => {handleOptionSelection(index,option.correct )}"
           >
@@ -88,9 +90,11 @@ const handleOptionSelection = (answer: number, correct: boolean) => {
 
 .option[aria-selected=true][aria-correct=true] {
   border: 1px solid $positive;
+  background: $green-2;
 }
 
 .option[aria-selected=true][aria-correct=false] {
   border: 1px solid $negative;
+  background: $red-2;
 }
 </style>

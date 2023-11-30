@@ -14,6 +14,16 @@ function handleMenuClick(question: TQuestion) {
   jsQuizStore.setQuestion(question.id);
   appStore.toggleDrawer();
 }
+
+function isAnsweredCorrectly(question: TQuestion, index: number) {
+  if (Object.keys(jsQuizStore.selectedAnswers).includes(question.id)) {
+    if (jsQuestions[index].options[jsQuizStore.selectedAnswers[question.id]].correct === true) {
+      return 1;
+    }
+    return -1;
+  }
+  return 0;
+}
 </script>
 
 <template>
@@ -63,7 +73,17 @@ function handleMenuClick(question: TQuestion) {
                :color="question.id === jsQuizStore.questionIndex ?  'secondary' : ''"
                v-bind:key="index" v-for="(question,index) in jsQuestions"
                @click="() => { handleMenuClick(question)}">
-          <div class="row full-width justify-start">QUESTION {{ question.id }}</div>
+          <div class="row full-width justify-between">
+            <span>QUESTION {{ question.id }}</span>
+            <q-icon
+              v-if="isAnsweredCorrectly(question,index) === 1"
+              color="positive"
+              name="check_circle"/>
+            <q-icon
+              v-if="isAnsweredCorrectly(question,index) === -1"
+              color="negative"
+              name="cancel"/>
+          </div>
         </q-btn>
       </div>
       <div class="row full-width justify-center q-col-gutter-sm">

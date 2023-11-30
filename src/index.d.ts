@@ -13,4 +13,6 @@ export type TQuestion = {
   __typename: string,
 }
 
+export type Dictionary = { [key in string]: any | Dictionary }
+
 export type TBreadcrumb = { to: string, display: string, icon: string }

@@ -26,8 +26,6 @@ function handleNextClick() {
       <q-card-section>
         <div class=" row justify-between text-h6">
           <span>Explanation</span>
-          <q-btn side round flat outlined icon="close"
-                 @click="() => jsQuizStore.toggleExplanation()"/>
         </div>
 
       </q-card-section>
@@ -43,9 +41,9 @@ function handleNextClick() {
       </q-card-section>
       <q-separator/>
       <q-card-section style="max-height: 50vh" class="scroll q-gutter-md">
-        <q-btn color="primary" text-color="dark" label="Prev"
+        <q-btn icon="navigate_before" color="primary" text-color="dark" label="Prev"
                @click="() => {handlePrevClick()}"/>
-        <q-btn color="primary" text-color="dark" label="Next"
+        <q-btn icon-right="navigate_next" color="primary" text-color="dark" label="Next"
                @click="() => {handleNextClick()}"/>
       </q-card-section>
     </q-card>
