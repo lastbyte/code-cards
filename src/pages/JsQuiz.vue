@@ -4,9 +4,13 @@ import QuizQuestion from 'components/QuizQuestion.vue';
 import { jsQuestions } from 'src/quiz';
 import { ref } from 'vue';
 import { useJsQuizStore } from 'stores/js-quiz-store';
+import { useRoute } from 'vue-router';
+import { useAppStore } from 'stores/app-store';
 
 const jsQuizStore = useJsQuizStore();
-const questionName = ref('1');
+const route = useRoute();
+const appStore = useAppStore();
+appStore.setPage('js-quiz');
 const carousel = ref();
 
 </script>
@@ -17,7 +21,7 @@ const carousel = ref();
                 animated
                 transition-prev="scale"
                 transition-next="scale"
-                :model-value="jsQuizStore.questionIndex"
+                :model-value="$route.params.id || jsQuizStore.questionIndex"
                 class="bg-transparent full-width full-height quiz-carousel">
       <q-carousel-slide v-bind:key="index" :name="question.id"
                         class="q-px-none"

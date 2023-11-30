@@ -12,7 +12,7 @@ const appStore = useAppStore();
 const jsQuizStore = useJsQuizStore();
 
 appStore.setBreadcrumb([{ to: '/', display: 'Cards', icon: 'code' }, {
-  to: '/js-quiz',
+  to: '/js-quiz/ques',
   display: 'Javascript',
   icon: 'javascript',
 }]);
