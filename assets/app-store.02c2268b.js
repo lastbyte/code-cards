@@ -1,1 +1,0 @@
-import{_ as e}from"./index.77cc7dbd.js";const a=e("appStore",{state:()=>({drawer:!1,breadcrumb:void 0}),getters:{},actions:{toggleDrawer(){this.drawer=!this.drawer},setBreadcrumb(r){this.breadcrumb=r}}});export{a as u};
