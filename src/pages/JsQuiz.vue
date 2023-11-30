@@ -3,7 +3,9 @@
 import QuizQuestion from 'components/QuizQuestion.vue';
 import { jsQuestions } from 'src/quiz';
 import { ref } from 'vue';
+import { useJsQuizStore } from 'stores/js-quiz-store';
 
+const jsQuizStore = useJsQuizStore();
 const questionName = ref('1');
 const carousel = ref();
 
@@ -16,7 +18,7 @@ const carousel = ref();
                 swipeable
                 transition-prev="slide-right"
                 transition-next="slide-left"
-                v-model="questionName"
+                :model-value="jsQuizStore.questionIndex"
                 class="bg-transparent full-width full-height quiz-carousel">
       <q-carousel-slide v-bind:key="index" :name="question.id"
                         class="q-px-none"
@@ -29,11 +31,11 @@ const carousel = ref();
         >
           <q-btn
             rounded dense color="primary" text-color="black" icon="arrow_left"
-            @click="$refs.carousel.previous()"
+            @click="() => {jsQuizStore.prevQuestion()}"
           />
           <q-btn
             rounded dense color="primary" text-color="black" icon-right="arrow_right"
-            @click="$refs.carousel.next()"
+            @click="() => {jsQuizStore.nextQuestion()}"
           />
         </q-carousel-control>
       </q-carousel-slide>
